@@ -12,7 +12,7 @@ nav a {} - target an element inside another element, e.g. target all <a> tags in
 h1, h2, h3 {} - target multiple elements at once
 */
 
-/* Define CSS variables - Color palette */
+/* Define CSS variables - Color palette & typography */
 /* Better for future changes, as you can change the color in one place */
 :root {
     --color-dark-green: #06402B;
@@ -29,18 +29,45 @@ h1, h2, h3 {} - target multiple elements at once
         width: 100%; /* Make room types take full width on smaller screens */
     }
 }
-header {
-    background-color: var(--color-dark-green);
-}
 
 /* Flexbox: a CSS layout system that allows you to position elements in a row or column flexibly */
 /* Apply it to a parent element and it arranges the children */
 /* Eg: make children sit in a row, spaced apart, vertically centred */
+
+/* HEADER STYLING */
 header {
+    background-color: var(--color-dark-green);
     display: flex;
     justify-content: space-between; /* space between children */
-    align-items: center; /* vertically centred */
 }
+
+header p.logo {
+    color: var(--color-warm-ivory);
+    font-family: var(--font-heading);
+    font-size: 1.5rem; /* 1.5 times the base font size */
+    font-weight: bold;
+    padding: 20px 10px; /* add some padding around the logo */
+    justify-content: flex-start; /* push the logo to the left */
+    margin-left: 10px; /* add some space to the left of the logo */
+}
+
+header nav ul {
+    display: flex; /* make the nav links sit in a row */
+    list-style: none; /* remove bullet points */
+    justify-content: flex-end; /* push the nav links to the right */
+    padding: 20px 10px; /* add some padding around the nav links */
+    align-items: center; /* vertically centre the nav links */
+}
+
+header nav ul li a {
+    margin-left: 20px; /* add some space between the nav links */
+    color: var(--color-warm-ivory);
+    text-decoration: none; /* remove underline */
+}
+header nav ul li a:last-child {
+    margin-right: 20px; /* add some space to the right of the last nav link */
+}
+
 h1, h2, h3 {
     font-family: var(--font-heading);
 }
