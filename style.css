@@ -1,0 +1,51 @@
+/* Reset all browser default styles to ensure consistency across different browsers */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Selectors - how to target elements
+h1 {} - target by element type
+.logo {} - target by class
+#hero {} - target by id
+nav a {} - target an element inside another element, e.g. target all <a> tags inside <nav>
+h1, h2, h3 {} - target multiple elements at once
+*/
+
+/* Define CSS variables - Color palette */
+/* Better for future changes, as you can change the color in one place */
+:root {
+    --color-dark-green: #06402B;
+    --color-warm-ivory: #FDF4DC;
+    --color-fairway-beige: #D4C5A9;
+    --color-warm-gold: #C9952A;
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Lato', sans-serif;
+}
+
+/* Responsive design with media queries - change styles based on screen size, e.g. when guests are checking on their phones */
+@media (max-width: 768px) {
+    .room-type {
+        width: 100%; /* Make room types take full width on smaller screens */
+    }
+}
+header {
+    background-color: var(--color-dark-green);
+}
+
+/* Flexbox: a CSS layout system that allows you to position elements in a row or column flexibly */
+/* Apply it to a parent element and it arranges the children */
+/* Eg: make children sit in a row, spaced apart, vertically centred */
+header {
+    display: flex;
+    justify-content: space-between; /* space between children */
+    align-items: center; /* vertically centred */
+}
+h1, h2, h3 {
+    font-family: var(--font-heading);
+}
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-warm-ivory);
+    color: var(--color-dark-green);
+}
