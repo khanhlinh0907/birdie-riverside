@@ -68,6 +68,53 @@ header nav ul li a:last-child {
     margin-right: 20px; /* add some space to the right of the last nav link */
 }
 
+/* HERO SECTION STYLING */
+#hero {
+    display: flex;
+    justify-content: center; /* center the content horizontally */
+    align-items: center; /* center the content vertically */
+    flex-direction: column; /* stack the content vertically */
+    text-align: center; /* center the text */
+    padding: 100px 100px; /* add some padding around the hero section */
+}
+
+#hero h1 {
+    font-family: var(--font-heading);
+    font-size: 3rem; /* 3 times the base font size */
+    color: var(--color-dark-green);
+    font-style: italic; /* make the heading italic */
+    margin-bottom: 20px; /* add some space below the subheading */
+}
+#hero p {
+    font-family: var(--font-body);
+    font-size: 1.2rem; /* 1.2 times the base font size */
+    color: var(--color-dark-green);
+    margin-bottom: 20px; /* add some space below the paragraph */
+}
+#hero p.location {
+    font-family: var(--font-body);
+    font-size: 1.2rem; /* 1.2 times the base font size, default root font size is 16px */
+    color: var(--color-warm-gold);
+    margin-bottom: 20px; /* add some space below the paragraph */
+    text-transform: uppercase; /* make the location text uppercase */
+    font-weight: bold; /* make the location text bold */
+}
+
+/* Style the Call To Action button */
+
+#hero a {
+    display: inline-block; /* make the link behave like a button */
+    background-color: var(--color-warm-gold);
+    color: var(--color-warm-ivory);
+    padding: 20px 28px; /* add some padding around the button */
+    text-decoration: none; /* remove underline */
+    font-family: var(--font-body);
+    font-weight: 700; /* make the button text bold */
+    letter-spacing: 0.06em; /* add some space between the letters, equal 6% of current font size */
+    border-radius: 10px; /* round the corners of the button */
+    margin-top: 20px; /* add some space above the button */
+}
+
 h1, h2, h3 {
     font-family: var(--font-heading);
 }
